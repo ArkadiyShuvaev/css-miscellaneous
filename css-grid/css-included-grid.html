@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>CssGrid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 70% 30%;
+            grid-column-gap: 1em; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            /* grid-auto-rows: 150px; */
+            grid-auto-rows: minmax(50px, auto);
+        }
+
+        .wrapper>div {
+            padding: 1em;
+            background-color: orange;
+        }
+
+        .wrapper>div.light {
+            background-color: rgb(255, 230, 0);
+        }
+
+        .included {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: 80px;
+        }
+
+        .included > div {
+            background-color: rgb(255, 123, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            Anim ipsum consectetur aliqua ullamco ut.
+        </div>
+        <div class="light">
+            Eiusmod dolore non dolore pariatur qui.
+        </div>
+        <div>
+            <div class="included">
+                <div> Lorem ipsum. </div>
+                <div> Lorem ipsum. </div>
+                <div> Lorem ipsum. </div>
+                <div> Lorem ipsum. </div>
+            </div>
+        </div>
+        <div class="light">
+            Officia ad non ut ex cupidatat.
+        </div>
+        <div>
+            Aliquip fugiat incididunt et ut non amet Lorem ipsum id voluptate exercitation velit. Ut voluptate culpa cillum quis eu magna nulla exercitation dolor pariatur. Reprehenderit tempor nisi commodo tempor ad aute proident do. Ea sit velit eu ullamco ea dolore labore laboris aliquip aute.   
+        </div>
+        <div class="light">
+            Eiusmod dolore non dolore pariatur qui.
+        </div>
+        <div>
+            Magna eiusmod minim ullamco commodo.
+        </div>
+        <div class="light">
+            Officia ad non ut ex cupidatat.
+        </div>
+    </div>
+</body>
+
+</html>
